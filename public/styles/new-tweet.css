@@ -1,0 +1,27 @@
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #545149;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+.tweet-button-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button {
+font-family: 'Bungee';
+font-size: 18px;
+color: #FFFFFF;
+background-color: #4056A1;
+}
+
+.tweet-counter {
+  font-family: 'Bungee';
+  font-size: 18px;
+  color: #545149;
+}
