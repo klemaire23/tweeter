@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+  font-size: 32px;
+}
+
+.new-tweet {
+  font-size: 18px;
+}
+
+.doubledown {
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  color: red;
+}
+
