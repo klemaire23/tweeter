@@ -5,10 +5,11 @@
   border: 2px solid #545149;
   color: #545149;
   font-weight: 600;
+  margin-bottom: 0.5em;
 }
 
 .tweet-container:hover {
-  box-shadow: 0px 0px 9px rgba(154, 149, 231, 1);
+  box-shadow: 7px 7px 3px rgba(163, 157, 242, 0.681);
 }
 
 .tweet-header {
