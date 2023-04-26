@@ -20,18 +20,15 @@
   font-size: 18px;
 }
 
-.avatar {
+.avatar-name {
   display: flex;
   align-items: center;
   margin-left: 1em;
+  font-weight: 300;
 }
 
-.name {
-  display: flex;
-  align-items: center;
-  margin-left: 1em;
-  padding-top: 1em;
-  font-weight: 300;
+.avatar-name img {
+  margin-right: 0.5em;
 }
 
 .handle {
