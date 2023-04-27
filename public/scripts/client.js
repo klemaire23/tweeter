@@ -90,11 +90,11 @@ $(document).ready(() => {
 
     if (!tweetText) {
 
-      return alert('You must type something to tweet it!');
+      return $('#error-container').html('⚠ Did you forget your thought? You need to type something to tweet! ⚠').slideDown();
 
     } else if (data.length > 140) {
 
-      return alert('You have typed too many characters. Max length is 140 characters');
+      return $('#error-container').html('⚠ Say less, bestie ⚠').slideDown();
     }
 
     $.ajax({
