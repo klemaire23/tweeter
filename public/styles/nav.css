@@ -27,3 +27,34 @@ nav span {
   color: red;
 }
 
+.compose {
+  color: red;
+  background-color: #4056A1;
+  border: none;
+}
+
+.compose:hover i {
+  transform: translateY(50%);
+  transition: transform 0.3s ease-in-out;
+
+}
+
+@media screen and (max-width: 1023px) {
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d4db00;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    color: #FFFFFF;
+    height: 120px;
+    padding: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+}
+
+

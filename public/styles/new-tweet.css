@@ -1,11 +1,11 @@
 .tweet-form {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid #545149;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 0.5em;
+  align-self: flex-start;
+  width: 100%;
 }
 
 .tweet-button-counter {
@@ -32,6 +32,14 @@ margin-bottom: 2em;
   color: red
 }
 
+#tweet-text {
+  width: 100%;
+  background-color: #f4f1ec;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #545149;
+}
+
 #error-container {
   display: flex;
   justify-content: center;
@@ -48,3 +56,11 @@ margin-bottom: 2em;
   height: 40px;
 }
 
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 45%;
+    margin-top: 11rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+  }
+}

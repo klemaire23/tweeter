@@ -4,23 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// {/* 
-//  const $avatarName = $('<div>');
-//   $avatarName.text('<img src="https://i.imgur.com/73hZDYK.png"><div>Newton</div>');
-//   $avatarName.addClass('avatar-name');
-
-//   const $handle = $('<div>');
-//     $handle.text('@SirIsaac');
-//     $handle.addClass('handle');
-
-//   const $tweetBody = $('<p>');
-//     $tweetBody.text('If I have seen further it is by standing on the shoulders of giants');
-//     $tweetBody.addClass('tweet-body');
-
-//   const $daysAgo = $('<div>');
-//     $daysAgo.text('10 days ago');
-//     $daysAgo.addClass('days-ago'); */}
-
 $(document).ready(() => {
 
   // function to protect against XSS
@@ -103,7 +86,9 @@ $(document).ready(() => {
       data: data
     }).then(() => {
       $('#tweet-text').val(''); // clears the textarea after a post
+      $('.tweet-counter').text('140');
       loadTweets();
+      $('#error-container').slideUp(); //to hide error message after a new post
     });
   });
 
