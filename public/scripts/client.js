@@ -23,6 +23,14 @@
 
 $(document).ready(() => {
 
+  // function to protect against XSS
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // retrieve tweets section from DOM
 
   const $tweetSection = $('#tweets-container');
@@ -32,15 +40,15 @@ $(document).ready(() => {
     <article class="tweet-container"> 
     <header class="tweet-header">
       <div class="avatar-name">
-        <img src=${tweet['user'].avatars}"><div>${tweet['user'].name}</div>
+        <img src=${escape(tweet['user'].avatars)}"><div>${escape(tweet['user'].name)}</div>
       </div>
       <div class="handle">
-        <p>${tweet['user'].handle}</p>
+        <p>${escape(tweet['user'].handle)}</p>
       </div>
     </header>
-    <p class="tweet-body">${tweet['content'].text}</p>
+    <p class="tweet-body">${escape(tweet['content'].text)}</p>
     <footer class="tweet-footer">
-      <div class="days-ago">${timeago.format(tweet.created_at)}</div>
+      <div class="days-ago">${escape(timeago.format(tweet.created_at))}</div>
       <div class="emojis">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
