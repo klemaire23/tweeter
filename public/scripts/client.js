@@ -80,7 +80,7 @@ $(document).ready(() => {
 
     if (!tweetText) {
 
-      return $('#error-container').html('⚠ Cat got your tongue? You have to type something to tweet! ⚠').slideDown();
+      return $('#error-container').html('⚠ Cat got your tongue? Type something to tweet! ⚠').slideDown();
 
     } else if (data.length > 140) {
 
