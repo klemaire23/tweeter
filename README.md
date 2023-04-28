@@ -10,7 +10,7 @@ Happy Tweetering!
 
 !["Screenshot of the Desktop View"](https://github.com/klemaire23/tweeter/blob/master/public/images/TweeterDeskTopView.png?raw=true)
 !["Screenshot of the Mobile/Tablet View"](https://github.com/klemaire23/tweeter/blob/master/public/images/TweeterMobileView.png?raw=true)
-!["Screenshot of a 140 character tweet"](https://github.com/klemaire23/tweeter/blob/master/public/images/tweetBox.png?raw=true)
+
 
 ## Getting Started
 
