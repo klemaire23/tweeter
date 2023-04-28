@@ -8,7 +8,7 @@ $(document).ready(() => {
 
   // function to protect against XSS
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -17,6 +17,8 @@ $(document).ready(() => {
   // retrieve tweets section from DOM
 
   const $tweetSection = $('#tweets-container');
+
+  // Dynamically render tweets; includes escape function
 
   const createTweetElement = (tweet) => {
     const $tweetElement = $(`
@@ -44,6 +46,8 @@ $(document).ready(() => {
     return $tweetElement;
   };
 
+  // Rending tweets and adding the newest ones to the top of the array
+
   const renderTweets = (arrOfTweets) => {
 
     for (const tweet of arrOfTweets) {
@@ -52,17 +56,20 @@ $(document).ready(() => {
     }
   };
 
-  // renderTweets();
+
+  // Fetch tweets
 
   const loadTweets = () => {
     $.ajax({
       method: 'GET',
       url: '/tweets'
     }).then((tweets) => {
-      renderTweets(tweets)
+      renderTweets(tweets);
     });
   };
   loadTweets();
+
+  // Event handler to detect when new tweet is being typed
 
   const $form = $('#new-tweet');
 
@@ -73,12 +80,14 @@ $(document).ready(() => {
 
     if (!tweetText) {
 
-      return $('#error-container').html('⚠ Did you forget your thought? You need to type something to tweet! ⚠').slideDown();
+      return $('#error-container').html('⚠ Cat got your tongue? You have to type something to tweet! ⚠').slideDown();
 
     } else if (data.length > 140) {
 
       return $('#error-container').html('⚠ Say less, bestie ⚠').slideDown();
     }
+
+    // POST route to add newest tweets to top of list without refreshing page
 
     $.ajax({
       method: 'POST',

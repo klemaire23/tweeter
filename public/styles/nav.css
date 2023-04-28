@@ -11,7 +11,7 @@
   right: 0;
 }
 
-nav span {
+.logo {
   font-family: 'Bungee', sans-serif;
   font-size: 32px;
 }
@@ -20,23 +20,15 @@ nav span {
   font-size: 18px;
 }
 
+.first-word {
+  font-weight: bold;
+}
+
 .doubledown {
   display: flex;
   font-size: 18px;
   justify-content: center;
   color: red;
-}
-
-.compose {
-  color: red;
-  background-color: #4056A1;
-  border: none;
-}
-
-.compose:hover i {
-  transform: translateY(50%);
-  transition: transform 0.3s ease-in-out;
-
 }
 
 @media screen and (max-width: 1023px) {

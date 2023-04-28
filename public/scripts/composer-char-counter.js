@@ -14,9 +14,9 @@ $(document).ready(function() {
       counterElement.addClass('negative');
       // console.log('Negative value:', counterValue);
     } else {
-    counterElement.removeClass('negative');
+      counterElement.removeClass('negative');
     }
-    
+
   });
 
 });

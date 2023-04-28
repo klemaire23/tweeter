@@ -31,10 +31,10 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navigation">
-      <span>tweeter</span>
+      <span class="logo">tweeter</span>
       <div>
         <div class="new-tweet">
-         <a><strong>Write</strong> a new tweet</a>
+         <a><span class="first-word">Write</span> a new tweet</a>
         </div>
         <div class="doubledown">
           <i class="fa-solid fa-angles-down"></i>
@@ -44,12 +44,10 @@
 
     <header class="nav-header">
         <div class="avatar">
-          <div>
-          <img src="/images/profile-hex.png">
-        </div>
+          <div><img src="/images/profile-hex.png"></div>
         <br>
-        <div>
-          <h2>Kamila Lemaire</h2>
+        <div class="user-name">
+          <span class="first-name">Kamila</span><span> Lemaire</span>
         </div>
         </div>
     </header>
@@ -66,7 +64,6 @@
           <output name="counter" class="tweet-counter" for="tweet-text">140</output>
         </div>
       </form>
-      
       <section id="tweets-container"></section>
     </main>
   </body>
