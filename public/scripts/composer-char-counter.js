@@ -1,11 +1,9 @@
 $(document).ready(function() {
 
-  const tweetText = document.getElementById('tweet-text');
-
   $('#tweet-text').on('input', function() {
-    let inputLength = $(this).val().length;
-    let counterElement = $(this).siblings('.tweet-button-counter').find('.tweet-counter');
-    let counterValue = 140 - inputLength;
+    const inputLength = $(this).val().length;
+    const counterElement = $(this).siblings('.tweet-button-counter').find('.tweet-counter');
+    const counterValue = 140 - inputLength;
 
     counterElement.text(counterValue);
 

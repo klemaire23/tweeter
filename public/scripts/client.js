@@ -82,7 +82,7 @@ $(document).ready(() => {
 
       return $('#error-container').html('⚠ Cat got your tongue? Type something to tweet! ⚠').slideDown();
 
-    } else if (data.length > 140) {
+    } else if (tweetText.length > 140) {
 
       return $('#error-container').html('⚠ Say less, bestie ⚠').slideDown();
     }
